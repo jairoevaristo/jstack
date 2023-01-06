@@ -14,9 +14,7 @@ const server = http.createServer(app);
 export const io = new Server(server);
 
 mongoose
-  .connect(
-    "mongodb://mongo:zU6o9lPFJ47gz3hj21ks@containers-us-west-116.railway.app:6256"
-  )
+  .connect()
   .then(() => {
     app.use((req, res, next) => {
       res.setHeader("Access-Control-Allow-Origin", "*");
